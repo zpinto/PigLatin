@@ -9,17 +9,17 @@ def trans(word):
     return newWord
 
 #intro
-print("Welcome To The Pig Latin Translator!\n")
+print("Welcome To The Pig Latin Translator!")
 repeat = True
 
 while repeat:
-    origSent = input("Input a sentence to be translated into Pig Latin: ").lower()
+    origSent = input("\nInput a sentence to be translated into Pig Latin: ").lower()
 
     string = ""
     punc = ""
 
     if origSent[len(origSent) - 1] == "." or origSent[len(origSent) - 1] == "!" or origSent[len(origSent) - 1] == "?":
-        string = origSent[0:len(origSent) - 2]
+        string = origSent[0:len(origSent) - 1]
         punc = origSent[len(origSent) - 1]
 
     else:
@@ -32,11 +32,11 @@ while repeat:
 
     for item in listSent:
         if item == listSent[0]:
-            newSent = newSent + trans(item).capitalize() + " "
+            newSent += trans(item).capitalize() + " "
         elif item == listSent[len(listSent) - 1]:
-            newSent = newSent + trans(item)
+            newSent += trans(item)
         else:
-            newSent = newSent + trans(item) + " "
+            newSent += trans(item) + " "
 
     newSent += punc
 
