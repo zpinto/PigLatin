@@ -1,4 +1,4 @@
-__author__ = 'zacharypinto and liamglynn'
+__author__ = 'zacharypinto'
 
 
 def trans(word):
